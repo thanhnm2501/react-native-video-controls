@@ -836,7 +836,7 @@ export default class VideoPlayer extends Component {
         const time = this.calculateTimeFromSeekerPosition();
         let state = this.state;
         if (time >= state.duration && !state.loading) {
-          state.paused = true;
+//           state.paused = true;
           state.seeking = false;
           this.events.onEnd();
           this.seekToEnd()
