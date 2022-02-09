@@ -1436,8 +1436,8 @@ const styles = {
       position: 'relative',
       top: 8,
       left: 8,
-      height: 15,
-      width: 15,
+      height: 20,
+      width: 20,
     },
   }),
 };
