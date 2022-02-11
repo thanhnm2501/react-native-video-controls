@@ -1417,7 +1417,7 @@ const styles = {
       backgroundColor: '#333',
       height: 1,
       position: 'relative',
-      top: 14,
+      top: 17,
       width: '100%',
     },
     fill: {
