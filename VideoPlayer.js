@@ -107,6 +107,7 @@ export default class VideoPlayer extends Component {
       togglePlayPause: this._togglePlayPause.bind(this),
       toggleControls: this._toggleControls.bind(this),
       toggleTimer: this._toggleTimer.bind(this),
+      resetFullscreen: this._resetFullScreen.bind(this)
     };
 
     /**
@@ -495,6 +496,12 @@ export default class VideoPlayer extends Component {
     }
 
     this.setState(state);
+  }
+
+  _resetFullScreen() {
+    typeof this.events.onExitFullscreen === 'function' &&
+        this.events.onExitFullscreen();
+    this.setState({isFullscreen: false})
   }
 
   /**
@@ -1417,7 +1424,7 @@ const styles = {
       backgroundColor: '#333',
       height: 1,
       position: 'relative',
-      top: 20,
+      top: 17,
       width: '100%',
     },
     fill: {
