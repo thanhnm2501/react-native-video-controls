@@ -553,7 +553,7 @@ export default class VideoPlayer extends Component {
   calculateTime() {
     if (this.state.showTimeRemaining) {
       const time = this.state.duration - this.state.currentTime;
-      return `-${this.formatTime(time)}`;
+      return `${this.formatTime(time)}`;
     }
     return this.formatTime(this.state.currentTime);
   }
